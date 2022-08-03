@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+:root {
+  --color-blue: Orange;
+  --color-white: white;
+  --color-white: gray;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html,
+body {
+  font-family: "PT Sans", sans-serif;
+  line-height: 1.4;
+  color: #000;
+}
+a {
+  color: #000;
+}
+ul {
+  list-style: none;
+}
+
+/* navbar */
+.navbar {
+  /* 習慢最大背影底色 */
+
+  height: auto;
+  background-color: var(--color-blue);
+  color: rgb(255, 255, 255);
+  padding: 0.6rem 2.5rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 96%;
+}
+/* 左 */
+.navbar-container {
+  /* 小的用 margin */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 左 */
+.logo {
+}
+.logo img {
+  /* 用display:flex******不能用%******** */
+  width: 9rem;
+}
+
+/* 中 */
+.navbar-left {
+  flex: 1;
+  margin-left: 2rem;
+}
+.navbar-left ul li {
+  margin-right: 0.7rem;
+}
+.navbar-left ul li p {
+  font-weight: 10;
+}
+/* 右 */
+.navbar-right {
+}
+
+.navbar-right ul li {
+  margin-right: 0.7rem;
+}
+.navbar-right ul li i {
+  color: white;
+}
+
+.language {
+  margin-right: -0.4rem;
+}
+/* 中右 */
+.navbar-left ul,
+.navbar-right ul {
+  display: flex;
+  align-items: center;
+
+  font-size: 0.7rem;
+}
+
+/* 背景 opening */
+.opening {
+  /* 背景video */
+  height: 40vh;
+  background-color: rgb(127, 126, 142);
+  background-blend-mode: multiply;
+  background-image: url(img/videoplayback.mp4);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+.opening p {
+  color: aliceblue;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.opening p span {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 1920px) {
+  .opening p {
+    color: aliceblue;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .opening p span {
+    font-size: 4rem;
+  }
+  .logo img {
+    /* 用display:flex******不能用%******** */
+    width: 12rem;
+  }
+  .navbar-left ul,
+  .navbar-right ul {
+    font-size: 1.3rem;
+  }
+  .navbar {
+    padding: 1rem 2.5rem;
+  }
+}
+/* box A */
+.wrap {
+  margin-bottom: 30px;
+  max-width: 1440px;
+  text-align: center;
+  margin: 0 4rem;
+  padding: 50px;
+}
+.grid-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.A1 {
+  background-color: var(--color-blue);
+}
+
+.A1 img,
+.A2 img {
+  max-width: 400px;
+  text-align: center;
+  justify-self: center;
+  margin: 0 auto;
+}
+.img {
+  text-align: center;
+}
+.Acontext {
+  max-width: 400px;
+  text-align: center;
+  justify-self: center;
+  margin: 5rem auto;
+}
+.text {
+  text-align: left;
+}
+
+.A1 button,
+.A2 button {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  background: none;
+  border: #000 3px solid;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.tlile {
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+}
+h2 {
+  font-weight: bolder;
+}
+.p {
+  font-size: 1rem;
+}
+/* A1 */
+.A1 .Acontext {
+  color: white;
+}
+
+.A1 button {
+  border: white 3px solid;
+}
+
+.A2 button {
+  border: var(--color-blue) 3px solid;
+  background-color: var(--color-blue);
+}
+.A2 button:hover {
+  background-color: rgb(255, 201, 63);
+  border: rgb(255, 201, 63) 3px solid;
+}
+
+/* grid-reversed */
+.A2 .Acontext {
+  order: 1;
+}
+.A2 .img {
+  order: 2;
+}
+
+/* C */
+.C button {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  background: none;
+  text-decoration: none;
+}
